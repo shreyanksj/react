@@ -1,18 +1,32 @@
-import Simple from "./Components/Simple"
-import Child from "./Components/Child"
-import SignIn from "./Components/SignIn"
-import { useState } from "react"
+import Parent from "./Components/Parent.jsx";
+import DataTable from "./Components/DataTable.jsx";
+import UseEffectHook from "./Components/UseEffectHook.jsx";
 
 const App = () => {
-  
+    const table1 = [
+      {name: "Rishi", designation: "Engineer"},
+      {name: "Skanda", designation: "Doctor"},
+      {name: "Suhail", designation: "Rand"},
+    ]
 
-  return (
-    <div className="App">
-      <SignIn />
+    const table2 = [
+      {name: "R", designation: "Engi"},
+      {name: "S", designation: "Doc"},
+      {name: "S", designation: "Plu"},
+    ]
 
-    
-    </div>
-  );
-}
+
+    return (
+        <>  
+          <div className="App">
+            <DataTable data={table1} />
+            <br></br>
+            <DataTable data={table2} />
+            <br></br>
+            <UseEffectHook />
+          </div>
+        </>
+    )
+};
 
 export default App;
